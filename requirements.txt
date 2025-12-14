@@ -1,9 +1,7 @@
 # --- Telegram Bot Libraries ---
-https://codeload.github.com/KurimuzonAkuma/pyrogram/zip/refs/heads/dev
-pyrofork==2.3.59
-TgCrypto
-pyromod
-aiogram
+pyrogram==2.0.106
+pyromod==1.5
+tgcrypto
 
 # --- Scheduling Support ---
 schedule
@@ -23,4 +21,3 @@ bs4
 beautifulsoup4
 shortzy
 aiofiles
-asyncio
