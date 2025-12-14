@@ -7,30 +7,30 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather, --⚠️ REQUIRED--
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8352104584:AAFiHNCBlzA_Fv0s-g_foK_b4k632UfHBzY")
 #Your API ID from my.telegram.org --⚠️ REQUIRED--
-APP_ID = int(os.environ.get("APP_ID", "24955235"))
+APP_ID = int(os.environ.get("APP_ID", "22128383"))
 
 #Your API Hash from my.telegram.org, --⚠️ REQUIRED--
-API_HASH = os.environ.get("API_HASH", "f317b3f7bbe390346d8b46868cff0de8")
+API_HASH = os.environ.get("API_HASH", "7992b5c5c9c6d34276c3dce9e46ba879")
 
 #Your db channel Id --⚠️ REQUIRED--
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002004278204"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1003494765620"))
 
 #OWNER ID --⚠️ REQUIRED--
-OWNER_ID = int(os.environ.get("OWNER_ID", "5706788169"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5960133511"))
 
 #SUPPORT_GROUP: This is used for normal users for getting help if they don't understand how to use the bot --⚠ OPTIONAL--
-SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "-1002309557046")
+SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "0")
 
 #Port
-PORT = os.environ.get("PORT", "8080")
+PORT = os.environ.get("PORT", "8050")
 
 #Database --⚠️ REQUIRED--
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://eno2223456:7Cdmqig5Ih2vrqW4@cluster0.ccpmee5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_URL = os.environ.get("DB_URL", "mongodb+srv://sktech007:sktech007@cluster0.utm4vj5.mongodb.net/?appName=Cluster0")
 DB_NAME = os.environ.get("DATABASE_NAME", "HonistaRobot")
 
-VERIFY_DB = os.environ.get("VERIFY_DB", "mongodb+srv://luffydb:12345@cluster0.nue5da5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+VERIFY_DB = os.environ.get("VERIFY_DB", "mongodb+srv://sktech07:sktech07@cluster0.0mmptus.mongodb.net/?appName=Cluster0")
 DBV_NAME = os.environ.get("VERIFY_DBNAME", "Honista")
 
 
@@ -38,7 +38,7 @@ TOKEN_PIC = os.environ.get("TOKEN_PIC", "https://graph.org/file/f03274dfad4979c8
 
 
 #Tutorial video for the user of your shortner on how to download.
-TUT_VID = os.environ.get("TUT_VID","https://t.me/HTODLINKZ/2")
+TUT_VID = os.environ.get("TUT_VID","https://t.me/ChipsTutorial/7")
 
 
 START_PIC = os.environ.get("START_PIC", "https://graph.org/file/8263af1da9ac363d8c580-a8912d879836f10ccd.jpg")
