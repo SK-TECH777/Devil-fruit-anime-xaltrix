@@ -33,17 +33,22 @@ class Bot(Client):
         self.username = bot_info.username
         self.uptime = datetime.now()
                 
-        self.db_channel = CHANNEL_ID
+        try:
+            db_channel = await self.get_chat(CHANNEL_ID)
 
-try:
-    # lightweight permission check (non-fatal)
-    await self.send_chat_action(CHANNEL_ID, "typing")
-    self.LOGGER(__name__).info("DB Channel access verified")
-except Exception as e:
-    self.LOGGER(__name__).warning(
-        f"Warning: Unable to verify DB channel at startup ({e})"
-    )
-    # DO NOT EXIT – allow bot to run
+            if not db_channel.invite_link:
+                db_channel.invite_link = await self.export_chat_invite_link(CHANNEL_ID)
+
+            self.db_channel = db_channel
+            
+            test = await self.send_message(chat_id = db_channel.id, text = "Testing")
+            await test.delete()
+            
+        except Exception as e:
+            self.LOGGER(__name__).warning(e)
+            self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel and have proper Permissions, So Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}")
+            self.LOGGER(__name__).info('Bot Stopped..')
+            
 
         self.set_parse_mode(ParseMode.HTML)
         self.LOGGER(__name__).info(f"ᴀᴅᴠᴀɴᴄᴇ ғɪʟᴇ-sʜᴀʀɪɴɢ ʙᴏᴛ ᴡɪᴛʜ ᴛᴏᴋᴇɴ ғᴇᴀᴛᴜʀᴇ V5 ᴍᴀᴅᴇ ʙʏ ➪ @Urr_Sanjiii [Tᴇʟᴇɢʀᴀᴍ Usᴇʀɴᴀᴍᴇ]")
