@@ -234,9 +234,8 @@ async def start_command(client: Client, message: Message):
                 id = message.from_user.id
             ),
             reply_markup = reply_markup,
-		has_spoiler = True,
-	        message_effect_id=5104841245755180586 #🔥
-        )
+	        message_effect_id=5104841245755180586)
+		
         try: await message.delete()
         except: pass
 
